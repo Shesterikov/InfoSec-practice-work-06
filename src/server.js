@@ -15,6 +15,10 @@ fastify.register(import('@fastify/static'), {
     prefix: '/'
 });
 
+fastify.get('/health', async function handler(request, reply) {
+    return { status: 'ok' }
+})
+
 const server = fastify.server;
 
 const io = new Server(server);

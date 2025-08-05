@@ -24,7 +24,7 @@
             e.preventDefault();
             if (input.value) {
                 socket.emit('new message', input.value);
-                input.text = '';
+                input.value = '';
             }
         });
 
